@@ -8,10 +8,10 @@ Create a burgers table with these fields:
 id: an auto incrementing int that serves as the primary key.
 burger_name: a string.
 devoured: a boolean.*/
-CREATE DATABASE pets_db;
-USE pets_db;
+CREATE DATABASE burgers_db;
+USE burgers_db;
 
-CREATE TABLE buyers
+CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
 	burger_name varchar(25) NOT NULL,
@@ -19,13 +19,4 @@ CREATE TABLE buyers
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE pets
-(
-	id int NOT NULL AUTO_INCREMENT,
-	animal_breed varchar(255) NOT NULL,
-	animal_name varchar(255) NOT NULL,
-	price int NOT NULL,
-	buyer_id int NOT NULL,
-	PRIMARY KEY (id),
-	FOREIGN KEY (buyer_id) REFERENCES buyers(id)
-);
+
